@@ -13,7 +13,7 @@ namespace MovieWebApplication.Controllers
 {
     public class MovieApiController : ApiController
     {
-        public async Task<string> getMovies(string url)
+        public async Task<string> GetMovies(string url)
         {
             /*Movie Details*/
             string apiBaseUri = "http://webjetapitest.azurewebsites.net";
@@ -30,7 +30,6 @@ namespace MovieWebApplication.Controllers
                 {
                     var data = await response.Content.ReadAsStringAsync();
                     return data;
-                    
                 }
                 else
                     return "NoRecords";

@@ -23,8 +23,8 @@ namespace MovieWebApplication.Controllers
             MoviesList cinemaModel = null;
             MoviesList filmModel = null;
             List<MovieModel> model = new List<MovieModel>();
-            string jsonCinemadata = await getMoviesbyUrl(cinemaurl);
-            string jsonFilmdata = await getMoviesbyUrl(filmurl);
+            string jsonCinemadata = await GetMoviesbyUrl(cinemaurl);
+            string jsonFilmdata = await GetMoviesbyUrl(filmurl);
 
             if (jsonCinemadata == "NoRecords" && jsonFilmdata == "NoRecords")
             {
@@ -43,10 +43,10 @@ namespace MovieWebApplication.Controllers
             }
             return View(model);
         }
-        private async Task<string> getMoviesbyUrl(string url)
+        private async Task<string> GetMoviesbyUrl(string url)
         {
             var webApi = new MovieApiController();
-            return await webApi.getMovies(url);
+            return await webApi.GetMovies(url);
         }
     }
 }
