@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MovieWebApplication.Models.MovieModel>
+@{
+    ViewBag.Title = "MoviesWorld";
+}
+
+<h2>Movies World</h2>
+<b>@ViewBag.Movies</b>
+@if (ViewBag.Movies != "No Movies")
+{
+    Html.RenderPartial("~/Views/Shared/_PartialGrid.cshtml",Model);
+}
+
+
+
