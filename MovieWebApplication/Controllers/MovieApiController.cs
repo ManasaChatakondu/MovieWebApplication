@@ -15,6 +15,7 @@ namespace MovieWebApplication.Controllers
     {
         public async Task<string> getMovies(string url)
         {
+            /*Movie Details*/
             string apiBaseUri = "http://webjetapitest.azurewebsites.net";
             string token = ConfigurationManager.AppSettings["Token"];
             using (var client = new HttpClient())
