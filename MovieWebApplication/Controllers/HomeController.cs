@@ -11,12 +11,13 @@ namespace MovieWebApplication.Controllers
 {
     public class HomeController : Controller
     {
+        MovieApiController webApi = new MovieApiController();
         string cinemaurl = "/api/cinemaworld/movies";
         string filmurl = "/api/filmworld/movies";
-        MovieApiController webApi = new MovieApiController();
         static MoviesList cinemaModel = null;
         static MoviesList filmModel = null;
 
+        [HandleError]
         public async Task<ActionResult> Index()
         {
             ViewBag.Movies = "";
@@ -43,13 +44,13 @@ namespace MovieWebApplication.Controllers
             //Adding Title and Poster to a list,to maintain unique records.
             foreach(MovieModel movie in model)
             {
-                bool containsItem = cfModel.Any(item => item.Title == movie.Title);//Checking if the movietitle is already there in the list
+                bool containsItem = cfModel.Any(item => item.Title == movie.Title);//looping to Check if the movietitle is already there in the list
                 if(!containsItem)
                     cfModel.Add(new CinemaFilmVM { Title= movie.Title,Poster= movie.Poster });
             }
             return View(cfModel);
-        }       
-
+        }
+        [HandleError]
         public async Task<ActionResult> GetMovieByID(string title,string poster)
         {
             string cinemaUrl, cinemaData = null, cinemaPrice = null; 

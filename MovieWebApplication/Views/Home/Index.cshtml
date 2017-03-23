@@ -2,43 +2,47 @@
 
 @{
     ViewBag.Title = "MoviesWorld";
+    int counter = 0;
 }
 
-<h2>Movies World</h2>
+<h2 class="page-title">Movies World</h2>
  @ViewBag.Movies
+
 
 @if (ViewBag.Movies != "No Movies")
 {
-<div class="row">
-    <div class="jumbotron">
-        <table class="table table-condensed" id="movietable">
-            <thead>
-                <tr>
-                    <th>
-                        @*<b>Movie</b>*@
-                    </th>
+    <div class="row">
 
-                </tr>
-            </thead>
-            <tbody>
-
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
+        @foreach (var item in Model)
+        {
+            if (counter != 0 && counter % 3 == 0)
+            {
+                @:</div>
+                @:<div class="row">
+            }
+            
+                <div class="col-md-4">
+                    <div class="clearfix">
+                        <div class="thumbnail" style="text-align: center">
                             <b>@Html.DisplayFor(modelItem => item.Title)</b><br />
-                            <img src="@item.Poster" id="adimg" alt="YourText" title="@item.Title" width="200px" height="150px" />
-                            <br />@Html.ActionLink("Check Price", "GetMovieByID", new { title = item.Title, poster = item.Poster }, new { @class = "btn btn-primary", @style = "color:White" })
+                            <img src="@item.Poster" alt="No Preview" />
+                            <br /><span>@Html.ActionLink("Check Price", "GetMovieByID", new { title = item.Title, poster = item.Poster }, new { @class = "btn btn-primary", @style = "color:White" })</span>
+                        </div>
+                    </div>
+            </div>
+            counter++;
+        }
 
-                        </td>
-
-                    </tr>
-                }
-            </tbody>
-        </table>
     </div>
-</div>
 }
+<style type="text/css">
+    .thumbnail img {
+    height:200px;
+    width:90%;
+}
+
+</style>
+
 
 
 

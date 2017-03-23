@@ -19,22 +19,32 @@ namespace MovieWebApplication.Controllers
             /*Movie Details*/
             string apiBaseUri = "http://webjetapitest.azurewebsites.net";
             string token = ConfigurationManager.AppSettings["Token"];
-            using (var client = new HttpClient())
+            try
             {
-                client.BaseAddress = new Uri(apiBaseUri);
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                client.DefaultRequestHeaders.Add("x-access-token", token);
-
-                HttpResponseMessage response = await client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
+                using (var client = new HttpClient())
                 {
-                    var data = await response.Content.ReadAsStringAsync();
-                    return data;
+                    client.BaseAddress = new Uri(apiBaseUri);
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                    client.DefaultRequestHeaders.Add("x-access-token", token);
+
+                    HttpResponseMessage response = await client.GetAsync(url);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var data = await response.Content.ReadAsStringAsync();
+                        return data;
+                    }
+                    else
+                        return "NoRecords";
                 }
-                else
-                    return "NoRecords";
             }
+            catch (HttpRequestException ex)
+            {
+                //This handles HttpClient exceptions
+                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("Message :{0} ", ex.Message);
+            }
+            return "NoRecords";
         }
     }
 }
