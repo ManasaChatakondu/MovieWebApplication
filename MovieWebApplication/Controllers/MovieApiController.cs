@@ -9,6 +9,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.Http;
 using MovieWebApplication.Models;
+
 namespace MovieWebApplication.Controllers
 {
     public class MovieApiController : ApiController
@@ -34,8 +35,6 @@ namespace MovieWebApplication.Controllers
                 else
                     return "NoRecords";
             }
-
         }
-
     }
 }

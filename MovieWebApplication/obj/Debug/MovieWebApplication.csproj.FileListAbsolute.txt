@@ -38,3 +38,4 @@ C:\Projects\MovieWebApplication\MovieWebApplication\bin\System.Web.Http.xml
 C:\Projects\MovieWebApplication\MovieWebApplication\bin\System.Web.Http.WebHost.xml
 C:\Projects\MovieWebApplication\MovieWebApplication\obj\Debug\MovieWebApplication.dll
 C:\Projects\MovieWebApplication\MovieWebApplication\obj\Debug\MovieWebApplication.pdb
+C:\Projects\MovieWebApplication\MovieWebApplication\obj\Debug\MovieWebApplication.csprojResolveAssemblyReference.cache

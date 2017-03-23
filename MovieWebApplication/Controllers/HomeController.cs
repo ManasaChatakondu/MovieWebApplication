@@ -4,8 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
-using System.Web.Helpers;
 using System.Web.Mvc;
 using MovieWebApplication.Models;
 
@@ -50,9 +48,7 @@ namespace MovieWebApplication.Controllers
                     cfModel.Add(new CinemaFilmVM { Title= movie.Title,Poster= movie.Poster });
             }
             return View(cfModel);
-        }
-
-       
+        }       
 
         public async Task<ActionResult> GetMovieByID(string title,string poster)
         {
@@ -126,11 +122,10 @@ namespace MovieWebApplication.Controllers
                 ViewBag.Data = "No data exists";
             return View(model);
         } 
+
         private async Task<string> GetMoviesbyUrl(string url)
         {
             return await webApi.GetMovies(url);
-        }
-
-        
+        }        
     }
 }

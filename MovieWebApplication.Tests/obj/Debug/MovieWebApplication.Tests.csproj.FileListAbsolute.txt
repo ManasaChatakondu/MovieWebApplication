@@ -12,10 +12,8 @@ C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\roslyn\VBCSC
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\MovieWebApplication.Tests.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\MovieWebApplication.Tests.pdb
-C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\MovieWebApplication.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\System.Web.Http.dll
-C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\System.Web.Mvc.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\System.Web.Http.WebHost.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\Newtonsoft.Json.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\System.Net.Http.Formatting.dll
@@ -37,3 +35,9 @@ C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\System.Web.W
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\obj\Debug\MovieWebApplication.Tests.csprojResolveAssemblyReference.cache
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\obj\Debug\MovieWebApplication.Tests.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\obj\Debug\MovieWebApplication.Tests.pdb
+C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\nunit.framework.dll
+C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\nunit.framework.xml
+C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\Castle.Core.dll
+C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\Moq.dll
+C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\Castle.Core.xml
+C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\Moq.xml
