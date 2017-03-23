@@ -1,0 +1,52 @@
+﻿@model MovieWebApplication.Models.MovieDescModel
+
+@*@{
+        ViewBag.Title = "MovieDescription";
+    }*@
+<br />
+<br />
+@ViewBag.Data
+@if (ViewBag.Data == "")
+{
+    <div class="jumbotron">
+
+        <div class="row" >
+            <div class="col-md-8 col-md-offset-4">
+                <b>@Html.DisplayFor(model => model.Title)<br /></b>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <img src="@Model.Poster" id="adimg" alt="YourText" title="@Model.Title" width="300px" height="400px" />
+                </div>
+                <div class="col-md-8">
+                    <dl class="dl-horizontal">
+                        <dd>
+                            <b>Price: @Html.DisplayFor(model => model.Price)</b>
+                        </dd>
+
+                        <dd>
+                            Director: @Html.DisplayFor(model => model.Director)
+                        </dd>
+
+                        <dd>
+                            Writer: @Html.DisplayFor(model => model.Writer)
+                        </dd>
+
+                        <dd>
+                            Actors: @Html.DisplayFor(model => model.Actors)
+                        </dd>
+
+                        <dd>
+                            Rating: @Html.DisplayFor(model => model.Rating)
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            @Html.ActionLink("Back to Movies List", "Index")
+
+        </div>
+        }
+
+

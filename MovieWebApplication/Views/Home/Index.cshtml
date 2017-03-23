@@ -1,14 +1,84 @@
-﻿@model IEnumerable<MovieWebApplication.Models.MovieModel>
+﻿@model IEnumerable<MovieWebApplication.Models.CinemaFilmVM>
+
 @{
     ViewBag.Title = "MoviesWorld";
 }
 
 <h2>Movies World</h2>
-<b>@ViewBag.Movies</b>
+ @ViewBag.Movies
+
 @if (ViewBag.Movies != "No Movies")
 {
-    Html.RenderPartial("~/Views/Shared/_PartialGrid.cshtml",Model);
+<div class="row">
+    <div class="jumbotron">
+        <table class="table table-condensed" id="movietable">
+            <thead>
+                <tr>
+                    <th>
+                        @*<b>Movie</b>*@
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <b>@Html.DisplayFor(modelItem => item.Title)</b><br />
+                            <img src="@item.Poster" id="adimg" alt="YourText" title="@item.Title" width="200px" height="150px" />
+                            <br />@Html.ActionLink("Check Price", "GetMovieByID", new { title = item.Title, poster = item.Poster }, new { @class = "btn btn-primary", @style = "color:White" })
+
+                        </td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
