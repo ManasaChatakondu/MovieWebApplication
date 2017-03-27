@@ -121,6 +121,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HttpClientFactory.cs" />
+    <Compile Include="Controllers\IHttpClient.cs" />
     <Compile Include="Controllers\MovieApiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

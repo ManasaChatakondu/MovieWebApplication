@@ -13,7 +13,6 @@ C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\roslyn\VBCSC
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\MovieWebApplication.Tests.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\MovieWebApplication.Tests.pdb
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\MovieWebApplication.dll
-C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\System.Web.Http.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\System.Web.Http.WebHost.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\Newtonsoft.Json.dll
 C:\Projects\MovieWebApplication\MovieWebApplication.Tests\bin\Debug\System.Net.Http.Formatting.dll
